@@ -9,10 +9,10 @@
 		"description": "Ввести строку для копирайта"
 	},
 	"Импорт": {
-		"scope": "sass,scss",
+		"scope": "scss",
 		"prefix": "import",
 		"body": [
-			"@import '$1'$2"
+			"@import '$1';"
 		],
 		"description": "Импорт модулей"
 	}
