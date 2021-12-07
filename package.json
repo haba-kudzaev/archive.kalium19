@@ -4,9 +4,9 @@
 	"description": "Простая SASS-библиотека для ускорения написания SASS-стилей",
 	"main": "css/main.css",
 	"scripts": {
-		"sass:compile": "sass src/sass/:assets/css --style compressed",
-		"sass:watch": "sass --watch src/sass/:assets/css",
-		"sass:watch-compressed": "sass --watch src/sass/:assets/css --style compressed",
+		"sass:compile": "sass sass/:css --style compressed",
+		"sass:watch": "sass --watch sass/:css",
+		"sass:watch-compressed": "sass --watch sass/:css --style compressed",
 		"editorconfig": "editorconfig-checker"
 	},
 	"repository": {
