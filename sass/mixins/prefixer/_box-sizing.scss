@@ -1,0 +1,16 @@
+// ! Copyright (c) 2021, Haba Kudzaev (rx1310) <rx1310@inbox.ru>
+
+@mixin box-sizing($boxModel: border) {
+
+	@if   	 $boxModel == border  { $boxModel: border-box;  }
+	@else if $boxModel == content { $boxModel: content-box; }
+
+	/* ? Box Sizing Compiled: #{$boxModel} */
+
+	@include prefixer(
+		box-sizing,
+		$boxModel,
+		o moz webkit
+	);
+
+}
