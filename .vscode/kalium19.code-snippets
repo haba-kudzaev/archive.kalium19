@@ -3,7 +3,8 @@
 		"scope": "sass,scss,js",
 		"prefix": "copyright",
 		"body": [
-			"// ! Copyright (c) 202$1, Haba Kudzaev (rx1310) <rx1310@inbox.ru>"
+			"// ! Copyright (c) 202$1, Haba Kudzaev (rx1310) <rx1310@inbox.ru>",
+			"$2"
 		],
 		"description": "Ввести строку для копирайта"
 	},

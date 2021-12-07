@@ -1,0 +1,56 @@
+// ! Copyright (c) 2021, Haba Kudzaev (rx1310) <rx1310@inbox.ru>
+
+@mixin prefixer($prop, $value) {
+	-webkit-#{$prop}: #{$value};
+	-khtml-#{$prop}: #{$value};
+	-moz-#{$prop}: #{$value};
+	-ms-#{$prop}: #{$value};
+	-o-#{$prop}: #{$value};
+	#{$prop}: #{$value};
+}
+
+@mixin k-prefixer($prop, $value, $prefixes: (), $withNonPrefixedDeclaration: true) {
+
+	@if $prefixes == "all" {
+
+		@include prefixer($prop, $value);
+
+	} @else {
+
+		@each $prefix in $prefixes {
+			#{'-' + $prefix + '-' + $prop}: $value;
+		}
+
+		// ? Вывод стандартного свойства без префикса
+		@if $withNonPrefixedDeclaration {
+			#{$prop}: $value;
+		}
+
+	}
+
+}
+
+@mixin k-prefixer-pack($declarations, $prefixes: (), $withNonPrefixedDeclaration: true) {
+
+	@each $prop, $value in $declarations {
+
+    @if $prefixes == "all" {
+
+			@include prefixer($prop, $value);
+
+		} @else {
+
+			@each $prefix in $prefixes {
+				#{'-' + $prefix + '-' + $prop}: $value;
+			}
+
+			// ? Вывод стандартного свойства без префикса
+			@if $withNonPrefixedDeclaration {
+				#{$prop}: $value;
+			}
+
+		}
+
+  }
+
+}
