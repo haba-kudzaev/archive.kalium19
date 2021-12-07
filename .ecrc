@@ -11,7 +11,7 @@
 	"Disable": {
 		"EndOfLine": false,
 		"Indentation": false,
-		"InsertFinalNewline": true,
+		"InsertFinalNewline": false,
 		"TrimTrailingWhitespace": false,
 		"IndentSize": false,
 		"MaxLineLength": false
