@@ -1,0 +1,35 @@
+{
+	"name": "kalium19",
+	"version": "0.0.1",
+	"description": "Простая SASS-библиотека для ускорения написания SASS-стилей",
+	"main": "css/main.css",
+	"scripts": {
+		"sass:compile": "sass src/sass/:assets/css --style compressed",
+		"sass:watch": "sass --watch src/sass/:assets/css",
+		"sass:watch-compressed": "sass --watch src/sass/:assets/css --style compressed",
+		"editorconfig": "editorconfig-checker"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/91muilak/kalium19.git"
+	},
+	"keywords": [
+		"kalium19",
+		"91muilak",
+		"k19",
+		"CSS",
+		"SASS",
+		"SCSS"
+	],
+	"author": "Haba Kudzaev <rx1310@inbox.ru>",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/91muilak/kalium19/issues"
+	},
+	"homepage": "https://github.com/91muilak/kalium19#readme",
+	"devDependencies": {
+		"editorconfig-checker": "^4.0.2",
+		"npm-run-all": "^4.1.5",
+		"sass": "^1.44.0"
+	}
+}
