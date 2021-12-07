@@ -1,0 +1,16 @@
+// ! Copyright (c) 2021, Haba Kudzaev (rx1310) <rx1310@inbox.ru>
+
+@import 'config';
+
+@import 'mixins/prefixer';
+@import 'mixins/prefixer/border-radius';
+@import 'mixins/prefixer/opacity';
+@import 'mixins/prefixer/tab-size';
+@import 'mixins/prefixer/transition';
+@import 'mixins/prefixer/box-sizing';
+@import 'mixins/prefixer/box-shadow';
+@import 'mixins/keyframes';
+@import 'mixins/important';
+@import 'mixins/placeholder';
+
+@import 'utils/opacity';

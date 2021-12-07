@@ -1,0 +1,27 @@
+{
+	"Копирайт": {
+		"scope": "sass,scss,js",
+		"prefix": "copyright",
+		"body": [
+			"// ! Copyright (c) 202$1, Haba Kudzaev (rx1310) <rx1310@inbox.ru>",
+			"$2"
+		],
+		"description": "Ввести строку для копирайта"
+	},
+	"Импорт": {
+		"scope": "scss",
+		"prefix": "import",
+		"body": [
+			"@import '$1';"
+		],
+		"description": "Импорт модулей"
+	},
+	"Комментарий (интерполяция)": {
+		"scope": "scss",
+		"prefix": "comment",
+		"body": [
+			"#{$1}"
+		],
+		"description": "Комментарий"
+	}
+}
