@@ -1,0 +1,13 @@
+// ! Copyright (c) 2021, Haba Kudzaev (rx1310) <rx1310@inbox.ru>
+
+@mixin transition($params...) {
+
+	/* ? Transition Compiled: #{$params} */
+
+	@include prefixer(
+		transition,
+		$params,
+		o moz webkit
+	);
+
+}
