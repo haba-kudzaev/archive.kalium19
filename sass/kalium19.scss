@@ -2,5 +2,10 @@
 
 @import 'mixins/prefixer';
 @import 'mixins/prefixer/border-radius';
+@import 'mixins/prefixer/opacity';
 @import 'mixins/keyframes';
 @import 'mixins/important';
+
+.b {
+	@include opacity(.45)
+}

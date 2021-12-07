@@ -25,7 +25,7 @@ $prefixesList: webkit, khtml, moz, ms, o !default;
 
 		// ? Вывод стандартного свойства без префикса
 		@if $withNonPrefixedDeclaration {
-			/* Non prefixed #{$prop} */
+			/* non prefixed #{$prop} */
 			#{$prop}: $value;
 		}
 
@@ -44,11 +44,13 @@ $prefixesList: webkit, khtml, moz, ms, o !default;
 		} @else {
 
 			@each $prefix in $prefixes {
+				/* #{$prop} for #{$prefix} */
 				#{'-' + $prefix + '-' + $prop}: $value;
 			}
 
 			// ? Вывод стандартного свойства без префикса
 			@if $withNonPrefixedDeclaration {
+				/* non prefixed #{$prop} */
 				#{$prop}: $value;
 			}
 
