@@ -1,6 +1,6 @@
 // ! Copyright (c) 2021, Haba Kudzaev (rx1310) <rx1310@inbox.ru>
 
-@mixin prefixer($prop, $value) {
+@mixin prefixer-all($prop, $value) {
 	-webkit-#{$prop}: #{$value};
 	-khtml-#{$prop}: #{$value};
 	-moz-#{$prop}: #{$value};
@@ -9,7 +9,7 @@
 	#{$prop}: #{$value};
 }
 
-@mixin k-prefixer($prop, $value, $prefixes: (), $withNonPrefixedDeclaration: true) {
+@mixin prefixer($prop, $value, $prefixes: (), $withNonPrefixedDeclaration: true) {
 
 	@if $prefixes == "all" {
 
@@ -30,7 +30,7 @@
 
 }
 
-@mixin k-prefixer-pack($declarations, $prefixes: (), $withNonPrefixedDeclaration: true) {
+@mixin prefixer-pack($declarations, $prefixes: (), $withNonPrefixedDeclaration: true) {
 
 	@each $prop, $value in $declarations {
 
