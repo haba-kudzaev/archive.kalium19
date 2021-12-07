@@ -3,6 +3,7 @@
 	"version": "0.0.1",
 	"description": "Простая SASS-библиотека для ускорения написания SASS-стилей",
 	"main": "css/main.css",
+	"var": "alpha",
 	"scripts": {
 		"sass:compile": "sass sass/:css --style compressed",
 		"sass:watch": "sass --watch sass/:css",
