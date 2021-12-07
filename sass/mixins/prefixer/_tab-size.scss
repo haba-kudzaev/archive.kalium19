@@ -1,0 +1,10 @@
+// ! Copyright (c) 2021, Haba Kudzaev (rx1310) <rx1310@inbox.ru>
+
+@mixin tab-size($size: 4) {
+	/* ? Tab Size Compiled: #{$size} */
+	@include prefixer(
+		tab-size,
+		$size,
+		o moz
+	)
+}
