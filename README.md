@@ -2,7 +2,7 @@
 [![Обсуждение](https://img.shields.io/badge/обсуждение-000000?logo=github)](https://github.com/91muilak/kalium19/discussions/4)
 
 
-<img src=".github/logo.png" alt="Logo" width="100px" align="right" /> Kalium19
+<img title="Логотип проекта" src=".github/logo.png" alt="Logo" width="100px" align="right" /> Kalium19 ![](https://img.shields.io/github/package-json/var/91muilak/kalium19?label=%20)
 ======
 :package: Набор утилит, миксинов, расширений на языке препроцессора [SASS](https://github.com/sass) для помощи в ускорении и упрощении написания CSS-стилей.
 
