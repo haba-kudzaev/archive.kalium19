@@ -2,7 +2,7 @@
 [![Обсуждение](https://img.shields.io/badge/обсуждение-000000?logo=github)](https://github.com/91muilak/kalium19/discussions/4)
 
 
-<img src=".github/logo.png" alt="Logo" width="100px" align="left" /> Kalium19
+<img title="Логотип проекта" src=".github/logo.png" alt="Logo" width="100px" align="right" /> Kalium19 ![](https://img.shields.io/github/package-json/var/91muilak/kalium19?label=%20)
 ======
 :package: Набор утилит, миксинов, расширений на языке препроцессора [SASS](https://github.com/sass) для помощи в ускорении и упрощении написания CSS-стилей.
 
@@ -36,19 +36,13 @@ git clone https://github.com/91muilak/kalium19
 ```bash
 npm install
 ```
-Команда установит все зависимости. Чтобы скомпилировать SASS в CSS необходимо выполнить команду `npm run sass:compile`. После этого появится папка _css_ с готовыми CSS-файлами.
+Команда установит [`sass`](https://www.npmjs.com/package/sass) ![Версия SASS](https://img.shields.io/github/package-json/dependency-version/91muilak/kalium19/dev/sass/main?label=%20) чтобы скомпилировать SASS в CSS.  Для компиляции необходимо выполнить команду `npm run sass:compile`. После этого появится папка _css_ с готовыми CSS-файлами.
 
 **Другие команды:**
 - `npm run sass:watch` - вотчинг изменений в файлах и мгновенная компиляция;
 - `npm run sass:watch-compressed` - то же что и `npm run sass:watch`, но компилируется уже минифицированный CSS;
 
-### 💾 Зависимости
-При выполнении команды `npm install` будут установлены зависимости проекта:
-
-![Зависимости npm](https://img.shields.io/github/package-json/dependency-version/91muilak/kalium19/dev/sass/main)
-![Зависимости npm](https://img.shields.io/github/package-json/dependency-version/91muilak/kalium19/dev/editorconfig-checker/main)
-![Зависимости npm](https://img.shields.io/github/package-json/dependency-version/91muilak/kalium19/dev/npm-run-all/main)
-
+> В принципе вы можете воспользоваться любым другим способом или утилитой для компиляции SASS.
 ## 👥 Комьюнити
 [Я](https://github.com/rx1310) буду рад получить от вас фидбек или какую-либо помощь для улучшения проекта. Идеи 💡, код 👩‍💻, советы 👌 и всё что только можно - я буду рад 😊.
 
