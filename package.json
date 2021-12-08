@@ -5,9 +5,9 @@
 	"main": "css/main.css",
 	"var": "alpha",
 	"scripts": {
-		"sass:compile": "sass sass/:css --style compressed",
-		"sass:watch": "sass --watch sass/:css",
-		"sass:watch-compressed": "sass --watch sass/:css --style compressed",
+		"sass:compile": "sass . --style compressed",
+		"sass:watch": "sass --watch .",
+		"sass:watch-compressed": "sass --watch . --style compressed",
 		"editorconfig": "editorconfig-checker"
 	},
 	"repository": {
