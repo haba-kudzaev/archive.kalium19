@@ -12,10 +12,10 @@
 @mixin border-radius-ext($top-left: 0, $top-right: 0, $bottom-right: 0, $bottom-left: 0, $log: false) {
 
 	/* Border Radius Compiled:
-	 ? Top Left: #{$top-left}
-	 ? Top Right: #{$top-right}
-	 ? Bottom Right: #{$bottom-right}
-	 ? Bottom Left: #{$bottom-left} */
+	? Top Left: #{$top-left}
+	? Top Right: #{$top-right}
+	? Bottom Right: #{$bottom-right}
+	? Bottom Left: #{$bottom-left} */
 
 	// ? Генерация свойств для WebKit
 	@include prefixer-pack(

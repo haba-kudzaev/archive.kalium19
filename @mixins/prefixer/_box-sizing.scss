@@ -2,7 +2,7 @@
 
 @mixin box-sizing($boxModel: border) {
 
-	@if   	 $boxModel == border  { $boxModel: border-box;  }
+	@if $boxModel == border	{ $boxModel: border-box; }
 	@else if $boxModel == content { $boxModel: content-box; }
 
 	/* ? Box Sizing Compiled: #{$boxModel} */

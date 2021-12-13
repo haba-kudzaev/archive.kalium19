@@ -8,5 +8,9 @@ tab_width = 2
 charset = utf-8
 trim_trailing_whitespace = true
 
-[*.yml]
+[.github/**.*]
+indent_style = space
+trim_trailing_whitespace = false
+
+[**.md]
 indent_style = space

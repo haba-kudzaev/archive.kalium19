@@ -37,7 +37,7 @@ $prefixesList: webkit, khtml, moz, ms, o !default;
 
 	@each $prop, $value in $declarations {
 
-    @if $prefixes == "all" {
+		@if $prefixes == "all" {
 
 			@include prefixer-all($prop, $value);
 
@@ -56,6 +56,6 @@ $prefixesList: webkit, khtml, moz, ms, o !default;
 
 		}
 
-  }
+	}
 
 }
