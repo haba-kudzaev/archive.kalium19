@@ -1,5 +1,6 @@
 // ! Copyright (c) 2021, Haba Kudzaev (rx1310) <rx1310@inbox.ru>
 
+$genFontColorsImportant   : false !default;
 $genFontColors_amber      : false !default;
 $genFontColors_blue-grey  : false !default;
 $genFontColors_blue       : false !default;
@@ -25,7 +26,13 @@ $genFontColors_yellow     : false !default;
 	@each $id, $key in $map {
 
 		.fc_#{$name}--#{$id} {
-			color: $key;
+			
+			@if $genFontColorsImportant {
+				color: $key !important;
+			} @else {
+				color: $key;
+			}
+
 		}
 
 	}
