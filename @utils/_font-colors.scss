@@ -1,0 +1,110 @@
+// ! Copyright (c) 2021, Haba Kudzaev (rx1310) <rx1310@inbox.ru>
+
+$k-fontColorsImportant   : false !default;
+$k-fontColors_amber      : false !default;
+$k-fontColors_blue-grey  : false !default;
+$k-fontColors_blue       : false !default;
+$k-fontColors_brown      : false !default;
+$k-fontColors_cyan       : false !default;
+$k-fontColors_deep-orange: false !default;
+$k-fontColors_deep-purple: false !default;
+$k-fontColors_green      : false !default;
+$k-fontColors_grey       : false !default;
+$k-fontColors_indigo     : false !default;
+$k-fontColors_light-blue : false !default;
+$k-fontColors_light-green: false !default;
+$k-fontColors_lime       : false !default;
+$k-fontColors_orange     : false !default;
+$k-fontColors_pink       : false !default;
+$k-fontColors_purple     : false !default;
+$k-fontColors_red        : false !default;
+$k-fontColors_teal       : false !default;
+$k-fontColors_yellow     : false !default;
+
+@mixin genFontColor($map, $name) {
+	@each $id, $key in $map {
+		.fc_#{$name}--#{$id} {
+			@if $k-fontColorsImportant {
+				color: $key !important;
+			} @else {
+				color: $key;
+			}
+		}
+	}
+}
+
+@if $k-fontColors_amber {
+	@include genFontColor($mdc-amber, 'amber')
+}
+
+@if $k-fontColors_blue-grey {
+	@include genFontColor($mdc-blue-grey, 'blue-grey')
+}
+
+@if $k-fontColors_blue {
+	@include genFontColor($mdc-blue, 'blue')
+}
+
+@if $k-fontColors_brown {
+	@include genFontColor($mdc-brown, 'brown')
+}
+
+@if $k-fontColors_cyan {
+	@include genFontColor($mdc-cyan, 'cyan')
+}
+
+@if $k-fontColors_deep-orange {
+	@include genFontColor($mdc-deep-orange, 'deep-orange')
+}
+
+@if $k-fontColors_deep-purple {
+	@include genFontColor($mdc-deep-purple, 'deep-purple')
+}
+
+@if $k-fontColors_green {
+	@include genFontColor($mdc-green, 'green')
+}
+
+@if $k-fontColors_grey {
+	@include genFontColor($mdc-grey, 'grey')
+}
+
+@if $k-fontColors_indigo {
+	@include genFontColor($mdc-indigo, 'indigo')
+}
+
+@if $k-fontColors_light-blue {
+	@include genFontColor($mdc-light-blue, 'light-blue')
+}
+
+@if $k-fontColors_light-green {
+	@include genFontColor($mdc-light-green, 'light-green')
+}
+
+@if $k-fontColors_lime {
+	@include genFontColor($mdc-lime, 'lime')
+}
+
+@if $k-fontColors_orange {
+	@include genFontColor($mdc-orange, 'orange')
+}
+
+@if $k-fontColors_pink {
+	@include genFontColor($mdc-pink, 'pink')
+}
+
+@if $k-fontColors_purple {
+	@include genFontColor($mdc-purple, 'purple')
+}
+
+@if $k-fontColors_red {
+	@include genFontColor($mdc-red, 'red')
+}
+
+@if $k-fontColors_teal {
+	@include genFontColor($mdc-teal, 'teal')
+}
+
+@if $k-fontColors_yellow {
+	@include genFontColor($mdc-yellow, 'yellow')
+}

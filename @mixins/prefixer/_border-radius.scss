@@ -1,6 +1,6 @@
 // ! Copyright (c) 2021, Haba Kudzaev (rx1310) <rx1310@inbox.ru>
 
-@mixin border-radius($radius: $defaultBorderRadius) {
+@mixin border-radius($radius: $k-borderRadiusDefault) {
 	/* ? Border Radius Compiled: #{$radius} */
 	@include prefixer(
 		border-radius,

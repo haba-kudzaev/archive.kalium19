@@ -2,7 +2,9 @@
 
 @mixin transition($params...) {
 
-	/* ? Transition Compiled: #{$params} */
+	/* ? Transition Compiled: 
+		#{$params} 
+	*/
 
 	@include prefixer(
 		transition,

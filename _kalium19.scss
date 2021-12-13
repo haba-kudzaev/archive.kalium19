@@ -8,12 +8,10 @@
 @import '@mixins/prefixer/transition';
 @import '@mixins/prefixer/box-sizing';
 @import '@mixins/prefixer/box-shadow';
+
 @import '@mixins/keyframes';
 @import '@mixins/important';
 @import '@mixins/placeholder';
-
-// * Utils
-@import '@utils/opacity';
 
 // * Colors
 @import '@colors/amber';
@@ -35,3 +33,8 @@
 @import '@colors/red';
 @import '@colors/teal';
 @import '@colors/yellow';
+
+// * Utils
+@import '@utils/opacity';
+@import '@utils/font-colors';
+@import '@utils/background-colors';

@@ -1,0 +1,110 @@
+// ! Copyright (c) 2021, Haba Kudzaev (rx1310) <rx1310@inbox.ru>
+
+$k-bgColorsImportant   : false !default;
+$k-bgColors_amber      : false !default;
+$k-bgColors_blue-grey  : false !default;
+$k-bgColors_blue       : false !default;
+$k-bgColors_brown      : false !default;
+$k-bgColors_cyan       : false !default;
+$k-bgColors_deep-orange: false !default;
+$k-bgColors_deep-purple: false !default;
+$k-bgColors_green      : false !default;
+$k-bgColors_grey       : false !default;
+$k-bgColors_indigo     : false !default;
+$k-bgColors_light-blue : false !default;
+$k-bgColors_light-green: false !default;
+$k-bgColors_lime       : false !default;
+$k-bgColors_orange     : false !default;
+$k-bgColors_pink       : false !default;
+$k-bgColors_purple     : false !default;
+$k-bgColors_red        : false !default;
+$k-bgColors_teal       : false !default;
+$k-bgColors_yellow     : false !default;
+
+@mixin genBackgroundColor($map, $name) {
+	@each $id, $key in $map {
+		.bgc_#{$name}--#{$id} {
+			@if $k-bgColorsImportant {
+				background-color: $key !important;
+			} @else {
+				background-color: $key;
+			}
+		}
+	}
+}
+
+@if $k-bgColors_amber {
+	@include genBackgroundColor($mdc-amber, 'amber')
+}
+
+@if $k-bgColors_blue-grey {
+	@include genBackgroundColor($mdc-blue-grey, 'blue-grey')
+}
+
+@if $k-bgColors_blue {
+	@include genBackgroundColor($mdc-blue, 'blue')
+}
+
+@if $k-bgColors_brown {
+	@include genBackgroundColor($mdc-brown, 'brown')
+}
+
+@if $k-bgColors_cyan {
+	@include genBackgroundColor($mdc-cyan, 'cyan')
+}
+
+@if $k-bgColors_deep-orange {
+	@include genBackgroundColor($mdc-deep-orange, 'deep-orange')
+}
+
+@if $k-bgColors_deep-purple {
+	@include genBackgroundColor($mdc-deep-purple, 'deep-purple')
+}
+
+@if $k-bgColors_green {
+	@include genBackgroundColor($mdc-green, 'green')
+}
+
+@if $k-bgColors_grey {
+	@include genBackgroundColor($mdc-grey, 'grey')
+}
+
+@if $k-bgColors_indigo {
+	@include genBackgroundColor($mdc-indigo, 'indigo')
+}
+
+@if $k-bgColors_light-blue {
+	@include genBackgroundColor($mdc-light-blue, 'light-blue')
+}
+
+@if $k-bgColors_light-green {
+	@include genBackgroundColor($mdc-light-green, 'light-green')
+}
+
+@if $k-bgColors_lime {
+	@include genBackgroundColor($mdc-lime, 'lime')
+}
+
+@if $k-bgColors_orange {
+	@include genBackgroundColor($mdc-orange, 'orange')
+}
+
+@if $k-bgColors_pink {
+	@include genBackgroundColor($mdc-pink, 'pink')
+}
+
+@if $k-bgColors_purple {
+	@include genBackgroundColor($mdc-purple, 'purple')
+}
+
+@if $k-bgColors_red {
+	@include genBackgroundColor($mdc-red, 'red')
+}
+
+@if $k-bgColors_teal {
+	@include genBackgroundColor($mdc-teal, 'teal')
+}
+
+@if $k-bgColors_yellow {
+	@include genBackgroundColor($mdc-yellow, 'yellow')
+}
