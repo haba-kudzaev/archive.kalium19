@@ -1,7 +1,9 @@
 // ! Copyright (c) 2021, Haba Kudzaev (rx1310) <rx1310@inbox.ru>
 
+$genOpacity: false !default;
+
 @if $genOpacity {
-	.opacity#{$separator-ordinal} {
+	.opacity-{
 		@for $opacity from 0 through 100 {
 			&#{$opacity} {
 				@include opacity(
