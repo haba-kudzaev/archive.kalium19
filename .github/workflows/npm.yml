@@ -1,0 +1,29 @@
+name: npm-publish
+
+on: [pull, pull_request]
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - uses: actions/setup-node@v2
+      with:
+        node-version: '14'
+    - uses: JS-DevTools/npm-publish@v1
+      with:
+        token: ${{ secrets.NPM_TOKEN }}
+    - if: steps.publish.outputs.type != 'none'
+      uses: appleboy/telegram-action@master
+      with:
+        to: ${{ secrets.TG_GROUP }}
+        token: ${{ secrets.TG_BOT_TOKEN }}
+        format: markdown
+        message: |
+          📌 **Версия Kalium19 ${{ steps.publish.outputs.version }} опубликована в npm!**
+          👨‍💻 [${{ github.actor }}](https://github.com/${{ github.actor }}) / telegram: @${{ github.actor }}
+          🗂 [${{ github.repository }}](https://github.com/${{ github.repository }})
+          #️⃣ [${{github.sha}}](https://github.com/${{ github.repository }}/commit/${{github.sha}})
+          🤖 ${{github.workflow}}
+      run: |
+        echo "Version changed: ${{ steps.publish.outputs.old-version }} => ${{ steps.publish.outputs.version }}"
