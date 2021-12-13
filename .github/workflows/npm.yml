@@ -25,5 +25,3 @@ jobs:
           🗂 [${{ github.repository }}](https://github.com/${{ github.repository }})
           #️⃣ [${{github.sha}}](https://github.com/${{ github.repository }}/commit/${{github.sha}})
           🤖 ${{github.workflow}}
-      run: |
-        echo "Version changed: ${{ steps.publish.outputs.old-version }} => ${{ steps.publish.outputs.version }}"
