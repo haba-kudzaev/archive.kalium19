@@ -12,9 +12,6 @@
 @import '@mixins/important';
 @import '@mixins/placeholder';
 
-// * Utils
-@import '@utils/opacity';
-
 // * Colors
 @import '@colors/amber';
 @import '@colors/blue-grey';
@@ -35,3 +32,7 @@
 @import '@colors/red';
 @import '@colors/teal';
 @import '@colors/yellow';
+
+// * Utils
+@import '@utils/opacity';
+@import '@utils/font-colors';
