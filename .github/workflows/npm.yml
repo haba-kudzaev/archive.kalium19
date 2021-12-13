@@ -15,7 +15,7 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
         # NOTE: use the NODE_ prefix instead of NPM_ here!
         NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-      uses: appleboy/telegram-action@master
+    - uses: appleboy/telegram-action@master
       with:
         to: ${{ secrets.TG_GROUP }}
         token: ${{ secrets.TG_BOT_TOKEN }}
