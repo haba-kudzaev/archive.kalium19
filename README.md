@@ -25,8 +25,52 @@
 ![Количество закрытых PR](https://img.shields.io/github/issues-pr-closed-raw/91muilak/kalium19?label=closed%20PR%27s)](https://github.com/91muilak/kalium19/pulls)
 ![visitors](https://visitor-badge.laobi.icu/badge?page_id=91muilak.kalium19)
 
+## 🗿 Как использовать?
+После выполнения [этапа установки](https://github.com/91muilak/kalium19#-%D1%83%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%BA%D0%B0-) вам становятся доступны все миксины и утилиты из пакета `kalium19`. Для примера посмотрим как использовать миксины Box Shadow и Border Radius: 
+
+```scss
+// src/card.scss
+
+@import '/path/to/kalium19';
+
+.card {
+
+  background-color: #42b922;
+  padding         : 1em 1.2em;
+  ...
+
+  // Добавим закругления
+  @include border-radius(8px);
+
+  // Добавим тени
+  @include box-shadow(
+    rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, 
+    rgba(60, 64, 67, 0.15) 0px 2px 6px 2px
+  );
+
+}
+```
+```css
+/* output/card.css */
+.card {
+
+  background-color: #42b922;
+  padding         : 1em 1.2em;
+  ...
+
+  -webkit-border-radius: 8px;
+  -moz-border-radius   : 8px;
+  border-radius        : 8px;
+
+  -webkit-box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+  -moz-box-shadow   : rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+  box-shadow        : rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+
+}
+```
+Помимо этих двух миксинов есть и другие. Подробнее в [документации](https://kalium19.netlify.app).
 ## 📥 Установка ![](https://img.shields.io/github/package-json/version/91muilak/kalium19/main?label=%20)
-Выполнить установку Kalium19 можно склонировав весь репозиторий напрямую с GitHub ~~или же установить через пакетный менеджер [npm](https://nodejs.org/en/download/)~~.
+Выполнить установку Kalium19 можно склонировав весь репозиторий напрямую с GitHub или же установить через пакетный менеджер [npm](https://nodejs.org/en/download/).
 ### 🔴 npm
 Для установки Kalium19 в проект выполните команду:
 ```bash
