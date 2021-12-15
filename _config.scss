@@ -1,0 +1,58 @@
+// ! Copyright (c) 2021, Haba Kudzaev (rx1310) <rx1310@inbox.ru>
+
+// ==== MIXINS ==================== //
+
+$k-prefixes: webkit, khtml, moz, ms, o !default; // * Список префиксов для миксина `prefixer-all`
+$k-borderRadiusDefault: 0px !default;
+$k-tabSizeDefault: 0;
+
+// ==== UTILS ==================== //
+
+$k-opacity     : false !default;
+$k-opacityClass: "k-opacity-" !default;
+
+$k-fontColorsClass       : "k-font-color_" !default;
+$k-fontColorsMod         : "-" !default;
+$k-fontColorsImportant   : false !default;
+$k-fontColors_amber      : false !default;
+$k-fontColors_blue-grey  : false !default;
+$k-fontColors_blue       : false !default;
+$k-fontColors_brown      : false !default;
+$k-fontColors_cyan       : false !default;
+$k-fontColors_deep-orange: false !default;
+$k-fontColors_deep-purple: false !default;
+$k-fontColors_green      : false !default;
+$k-fontColors_grey       : false !default;
+$k-fontColors_indigo     : false !default;
+$k-fontColors_light-blue : false !default;
+$k-fontColors_light-green: false !default;
+$k-fontColors_lime       : false !default;
+$k-fontColors_orange     : false !default;
+$k-fontColors_pink       : false !default;
+$k-fontColors_purple     : false !default;
+$k-fontColors_red        : false !default;
+$k-fontColors_teal       : false !default;
+$k-fontColors_yellow     : false !default;
+
+$k-bgColorsClass       : "k-bg-color_" !default;
+$k-bgColorsMod         : "-" !default;
+$k-bgColorsImportant   : false !default;
+$k-bgColors_amber      : false !default;
+$k-bgColors_blue-grey  : false !default;
+$k-bgColors_blue       : false !default;
+$k-bgColors_brown      : false !default;
+$k-bgColors_cyan       : false !default;
+$k-bgColors_deep-orange: false !default;
+$k-bgColors_deep-purple: false !default;
+$k-bgColors_green      : false !default;
+$k-bgColors_grey       : false !default;
+$k-bgColors_indigo     : false !default;
+$k-bgColors_light-blue : false !default;
+$k-bgColors_light-green: false !default;
+$k-bgColors_lime       : false !default;
+$k-bgColors_orange     : false !default;
+$k-bgColors_pink       : false !default;
+$k-bgColors_purple     : false !default;
+$k-bgColors_red        : false !default;
+$k-bgColors_teal       : false !default;
+$k-bgColors_yellow     : false !default;

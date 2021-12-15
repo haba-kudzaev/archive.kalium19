@@ -1,10 +1,8 @@
 // ! Copyright (c) 2021, Haba Kudzaev (rx1310) <rx1310@inbox.ru>
 
-$k-prefixesList: webkit, khtml, moz, ms, o !default;
-
 @mixin prefixer-all($prop, $value) {
 
-	@each $prefix in $k-prefixesList {
+	@each $prefix in $k-prefixes {
 		-#{$prefix}-#{$prop}: #{$value};
 	}
 
