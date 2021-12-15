@@ -1,5 +1,7 @@
 // ! Copyright (c) 2021, Haba Kudzaev (rx1310) <rx1310@inbox.ru>
 
+@import 'config';
+
 // * Mixins
 @import '@mixins/prefixer';
 @import '@mixins/prefixer/border-radius';
@@ -12,6 +14,7 @@
 @import '@mixins/keyframes';
 @import '@mixins/important';
 @import '@mixins/placeholder';
+@import '@mixins/media';
 
 // * Colors
 @import '@colors/amber';
@@ -38,3 +41,6 @@
 @import '@utils/opacity';
 @import '@utils/font-colors';
 @import '@utils/background-colors';
+
+// * Extends
+@import '@extends/clearfix';

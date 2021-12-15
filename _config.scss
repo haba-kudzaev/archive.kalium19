@@ -1,0 +1,73 @@
+// ! Copyright (c) 2021, Haba Kudzaev (rx1310) <rx1310@inbox.ru>
+
+// ==== MIXINS ==================== //
+
+$k-prefixes           : webkit, khtml, moz, ms, o !default;  // ? Список префиксов для миксина "prefixer-all"
+$k-borderRadiusDefault: 0px !default;                        // ? Указывает дефолтное значение для миксина "border-radius"
+$k-tabSizeDefault     : 0;                                   // ? Указывает дефолтное значение для миксина "tab-size"
+
+$k-mediaQueries: (                                           // ? Список медиа запросов для миксина "media"
+  null: null,
+  wmin-sm: 'screen and (min-width: 576px)',
+  wmax-sm: 'screen and (max-width: 576px)',
+  wmin-md: 'screen and (min-width: 768px)',
+  wmax-md: 'screen and (max-width: 768px)',
+  wmin-lg: 'screen and (min-width: 992px)',
+  wmax-lg: 'screen and (max-width: 992px)',
+  wmin-xl: 'screen and (min-width: 1200px)',
+  wmax-xl: 'screen and (max-width: 1200px)',
+) !default;
+
+// ==== UTILS ==================== //
+
+// * Opacity
+$k-opacity     : false !default;         // ? Настройка, которая активирует генерацию классов "opacity" при значении true
+$k-opacityClass: "k-opacity-" !default;  // ? Указывает название класса (.k-opacity-55, напр.)
+
+// * Font Colors
+$k-fontColorsClass       : "k-font-color_" !default;  // ? Указывает название класса (.k-font-color_amber-500, напр.)
+$k-fontColorsMod         : "-" !default;              // ? Указывает вид модификатора (...amber-500)
+$k-fontColorsImportant   : false !default;            // ? Настройка,, которая будет генерировать ксвойства с правилом !important при true
+$k-fontColors_amber      : false !default;            // ? Генерация классов с данным цветом будет работать при значении true
+$k-fontColors_blue-grey  : false !default;            // ? Генерация классов с данным цветом будет работать при значении true
+$k-fontColors_blue       : false !default;            // ? Генерация классов с данным цветом будет работать при значении true
+$k-fontColors_brown      : false !default;            // ? Генерация классов с данным цветом будет работать при значении true
+$k-fontColors_cyan       : false !default;            // ? Генерация классов с данным цветом будет работать при значении true
+$k-fontColors_deep-orange: false !default;            // ? Генерация классов с данным цветом будет работать при значении true
+$k-fontColors_deep-purple: false !default;            // ? Генерация классов с данным цветом будет работать при значении true
+$k-fontColors_green      : false !default;            // ? Генерация классов с данным цветом будет работать при значении true
+$k-fontColors_grey       : false !default;            // ? Генерация классов с данным цветом будет работать при значении true
+$k-fontColors_indigo     : false !default;            // ? Генерация классов с данным цветом будет работать при значении true
+$k-fontColors_light-blue : false !default;            // ? Генерация классов с данным цветом будет работать при значении true
+$k-fontColors_light-green: false !default;            // ? Генерация классов с данным цветом будет работать при значении true
+$k-fontColors_lime       : false !default;            // ? Генерация классов с данным цветом будет работать при значении true
+$k-fontColors_orange     : false !default;            // ? Генерация классов с данным цветом будет работать при значении true
+$k-fontColors_pink       : false !default;            // ? Генерация классов с данным цветом будет работать при значении true
+$k-fontColors_purple     : false !default;            // ? Генерация классов с данным цветом будет работать при значении true
+$k-fontColors_red        : false !default;            // ? Генерация классов с данным цветом будет работать при значении true
+$k-fontColors_teal       : false !default;            // ? Генерация классов с данным цветом будет работать при значении true
+$k-fontColors_yellow     : false !default;            // ? Генерация классов с данным цветом будет работать при значении true
+
+// * Background Colors
+$k-bgColorsClass       : "k-bg-color_" !default;  // ? Указывает название класса (.k-font-color_amber-500, напр.)
+$k-bgColorsMod         : "-" !default;            // ? Указывает вид модификатора (...amber-500)
+$k-bgColorsImportant   : false !default;          // ? Настройка,, которая будет генерировать ксвойства с правилом !important при true
+$k-bgColors_amber      : false !default;          // ? Генерация классов с данным цветом будет работать при значении true
+$k-bgColors_blue-grey  : false !default;          // ? Генерация классов с данным цветом будет работать при значении true
+$k-bgColors_blue       : false !default;          // ? Генерация классов с данным цветом будет работать при значении true
+$k-bgColors_brown      : false !default;          // ? Генерация классов с данным цветом будет работать при значении true
+$k-bgColors_cyan       : false !default;          // ? Генерация классов с данным цветом будет работать при значении true
+$k-bgColors_deep-orange: false !default;          // ? Генерация классов с данным цветом будет работать при значении true
+$k-bgColors_deep-purple: false !default;          // ? Генерация классов с данным цветом будет работать при значении true
+$k-bgColors_green      : false !default;          // ? Генерация классов с данным цветом будет работать при значении true
+$k-bgColors_grey       : false !default;          // ? Генерация классов с данным цветом будет работать при значении true
+$k-bgColors_indigo     : false !default;          // ? Генерация классов с данным цветом будет работать при значении true
+$k-bgColors_light-blue : false !default;          // ? Генерация классов с данным цветом будет работать при значении true
+$k-bgColors_light-green: false !default;          // ? Генерация классов с данным цветом будет работать при значении true
+$k-bgColors_lime       : false !default;          // ? Генерация классов с данным цветом будет работать при значении true
+$k-bgColors_orange     : false !default;          // ? Генерация классов с данным цветом будет работать при значении true
+$k-bgColors_pink       : false !default;          // ? Генерация классов с данным цветом будет работать при значении true
+$k-bgColors_purple     : false !default;          // ? Генерация классов с данным цветом будет работать при значении true
+$k-bgColors_red        : false !default;          // ? Генерация классов с данным цветом будет работать при значении true
+$k-bgColors_teal       : false !default;          // ? Генерация классов с данным цветом будет работать при значении true
+$k-bgColors_yellow     : false !default;          // ? Генерация классов с данным цветом будет работать при значении true

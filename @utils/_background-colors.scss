@@ -1,29 +1,8 @@
 // ! Copyright (c) 2021, Haba Kudzaev (rx1310) <rx1310@inbox.ru>
 
-$k-bgColorsImportant   : false !default;
-$k-bgColors_amber      : false !default;
-$k-bgColors_blue-grey  : false !default;
-$k-bgColors_blue       : false !default;
-$k-bgColors_brown      : false !default;
-$k-bgColors_cyan       : false !default;
-$k-bgColors_deep-orange: false !default;
-$k-bgColors_deep-purple: false !default;
-$k-bgColors_green      : false !default;
-$k-bgColors_grey       : false !default;
-$k-bgColors_indigo     : false !default;
-$k-bgColors_light-blue : false !default;
-$k-bgColors_light-green: false !default;
-$k-bgColors_lime       : false !default;
-$k-bgColors_orange     : false !default;
-$k-bgColors_pink       : false !default;
-$k-bgColors_purple     : false !default;
-$k-bgColors_red        : false !default;
-$k-bgColors_teal       : false !default;
-$k-bgColors_yellow     : false !default;
-
 @mixin genBackgroundColor($map, $name) {
 	@each $id, $key in $map {
-		.bgc_#{$name}--#{$id} {
+		.#{$k-bgColorsClass}#{$name}#{$k-bgColorsMod}#{$id} {
 			@if $k-bgColorsImportant {
 				background-color: $key !important;
 			} @else {

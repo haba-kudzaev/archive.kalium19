@@ -1,14 +1,10 @@
 // ! Copyright (c) 2021, Haba Kudzaev (rx1310) <rx1310@inbox.ru>
 
-$k-opacity: false !default;
-
 @if $k-opacity {
-	.opacity-{
+	.#{$k-opacityClass} {
 		@for $opacity from 0 through 100 {
 			&#{$opacity} {
-				@include opacity(
-					$opacity / 100
-				);
+				@include opacity( $opacity / 100 );
 			}
 		}
 	}

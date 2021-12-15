@@ -1,29 +1,8 @@
 // ! Copyright (c) 2021, Haba Kudzaev (rx1310) <rx1310@inbox.ru>
 
-$k-fontColorsImportant   : false !default;
-$k-fontColors_amber      : false !default;
-$k-fontColors_blue-grey  : false !default;
-$k-fontColors_blue       : false !default;
-$k-fontColors_brown      : false !default;
-$k-fontColors_cyan       : false !default;
-$k-fontColors_deep-orange: false !default;
-$k-fontColors_deep-purple: false !default;
-$k-fontColors_green      : false !default;
-$k-fontColors_grey       : false !default;
-$k-fontColors_indigo     : false !default;
-$k-fontColors_light-blue : false !default;
-$k-fontColors_light-green: false !default;
-$k-fontColors_lime       : false !default;
-$k-fontColors_orange     : false !default;
-$k-fontColors_pink       : false !default;
-$k-fontColors_purple     : false !default;
-$k-fontColors_red        : false !default;
-$k-fontColors_teal       : false !default;
-$k-fontColors_yellow     : false !default;
-
 @mixin genFontColor($map, $name) {
 	@each $id, $key in $map {
-		.fc_#{$name}--#{$id} {
+		.#{$k-fontColorsClass}#{$name}#{$k-fontColorsMod}#{$id} {
 			@if $k-fontColorsImportant {
 				color: $key !important;
 			} @else {

@@ -1,0 +1,9 @@
+// ! Copyright (c) 2021, Haba Kudzaev (rx1310) <rx1310@inbox.ru>
+
+%clearfix {
+  &::after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+}
