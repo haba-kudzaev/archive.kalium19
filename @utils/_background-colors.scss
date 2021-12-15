@@ -1,6 +1,7 @@
 // ! Copyright (c) 2021, Haba Kudzaev (rx1310) <rx1310@inbox.ru>
 
-$k-bgColorsPrefix      : "bgc_" !default;
+$k-bgColorsPrefix      : "bgc-" !default;
+$k-bgColorsModificator : "_" !default;
 $k-bgColorsImportant   : false !default;
 $k-bgColors_amber      : false !default;
 $k-bgColors_blue-grey  : false !default;
@@ -24,7 +25,7 @@ $k-bgColors_yellow     : false !default;
 
 @mixin genBackgroundColor($map, $name) {
 	@each $id, $key in $map {
-		.#{$k-bgColorsPrefix}#{$name}--#{$id} {
+		.#{$k-bgColorsPrefix}#{$name}#{$k-bgColorsModificator}#{$id} {
 			@if $k-bgColorsImportant {
 				background-color: $key !important;
 			} @else {

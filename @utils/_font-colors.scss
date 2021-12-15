@@ -1,6 +1,7 @@
 // ! Copyright (c) 2021, Haba Kudzaev (rx1310) <rx1310@inbox.ru>
 
-$k-fontColorsPrefix      : "fc_" !default;
+$k-fontColorsPrefix      : "fc-" !default;
+$k-fontColorsModificator : "_" !default;
 $k-fontColorsImportant   : false !default;
 $k-fontColors_amber      : false !default;
 $k-fontColors_blue-grey  : false !default;
@@ -24,7 +25,7 @@ $k-fontColors_yellow     : false !default;
 
 @mixin genFontColor($map, $name) {
 	@each $id, $key in $map {
-		.#{$k-fontColorsPrefix}#{$name}--#{$id} {
+		.#{$k-fontColorsPrefix}#{$name}#{$k-fontColorsModificator}#{$id} {
 			@if $k-fontColorsImportant {
 				color: $key !important;
 			} @else {
