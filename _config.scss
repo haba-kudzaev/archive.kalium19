@@ -8,9 +8,11 @@ $k-tabSizeDefault     : 0;                                   // ? Указыва
 
 // ==== UTILS ==================== //
 
+// * Opacity
 $k-opacity     : false !default;         // ? Настройка, которая активирует генерацию классов "opacity" при значении true
 $k-opacityClass: "k-opacity-" !default;  // ? Указывает название класса (.k-opacity-55, напр.)
 
+// * Font Colors
 $k-fontColorsClass       : "k-font-color_" !default;  // ? Указывает название класса (.k-font-color_amber-500, напр.)
 $k-fontColorsMod         : "-" !default;              // ? Указывает вид модификатора (...amber-500)
 $k-fontColorsImportant   : false !default;            // ? Настройка,, которая будет генерировать ксвойства с правилом !important при true
@@ -34,6 +36,7 @@ $k-fontColors_red        : false !default;            // ? Генерация к
 $k-fontColors_teal       : false !default;            // ? Генерация классов с данным цветом будет работать при значении true
 $k-fontColors_yellow     : false !default;            // ? Генерация классов с данным цветом будет работать при значении true
 
+// * Background Colors
 $k-bgColorsClass       : "k-bg-color_" !default;  // ? Указывает название класса (.k-font-color_amber-500, напр.)
 $k-bgColorsMod         : "-" !default;            // ? Указывает вид модификатора (...amber-500)
 $k-bgColorsImportant   : false !default;          // ? Настройка,, которая будет генерировать ксвойства с правилом !important при true
