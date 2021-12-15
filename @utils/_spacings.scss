@@ -1,0 +1,52 @@
+// ! Copyright (c) 2021, Haba Kudzaev (rx1310) <rx1310@inbox.ru>
+
+@mixin genSpacers($value, $side: null, $sideShort: null) {
+
+	@if $side {
+
+		$classSuffix: 
+			"#{$sideShort}" +
+			"#{$k-spacingsMod}" +
+			"#{$value}";
+
+		.#{$k-spacingsClass_margin}#{$classSuffix} {
+			margin-#{$side}: #{$value}px;
+		}
+
+		.#{$k-spacingsClass_padding}#{$classSuffix} {
+			padding-#{$side}: #{$value}px;
+		}
+
+	} @else {
+
+		$classSuffix: 
+			"#{$k-spacingsMod}" +
+			"#{$value}";
+
+		.#{$k-spacingsClass_margin}#{$classSuffix} {
+			margin: #{$value}px;
+		}
+
+		.#{$k-spacingsClass_padding}#{$classSuffix} {
+			padding: #{$value}px;
+		}
+
+	}
+
+}
+
+@if $k-spacings {
+
+	@each $value in $k-spacings {
+
+		@include genSpacers($value);
+		@include genSpacers($value, bottom, b);
+		@include genSpacers($value, right, r);
+		@include genSpacers($value, left, l);
+		@include genSpacers($value, top, t);
+		
+	}
+
+	@warn "Используется генерация отступов, которая находится в разработке!"
+
+}
