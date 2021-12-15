@@ -6,6 +6,14 @@ $k-prefixes           : webkit, khtml, moz, ms, o !default;  // ? Список �
 $k-borderRadiusDefault: 0px !default;                        // ? Указывает дефолтное значение для миксина "border-radius"
 $k-tabSizeDefault     : 0;                                   // ? Указывает дефолтное значение для миксина "tab-size"
 
+$k-mediaQueries: (
+  null: null,
+  w-sm: 'screen and (min-width: 576px)',
+  w-md: 'screen and (min-width: 768px)',
+  w-lg: 'screen and (min-width: 992px)',
+  w-xl: 'screen and (min-width: 1200px)',
+) !default;
+
 // ==== UTILS ==================== //
 
 // * Opacity

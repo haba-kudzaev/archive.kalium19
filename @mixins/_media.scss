@@ -1,0 +1,16 @@
+// ! Copyright (c) 2021, Haba Kudzaev (rx1310) <rx1310@inbox.ru>
+
+@mixin media($query) {
+
+  $media: map-get($k-mediaQueries, $query);
+
+  @if $media {
+    @media #{$media} { 
+			@content 
+		}
+  } @else {
+		@warn "Media query '#{$query}' not found in variables!";
+		@content
+	}
+
+}
