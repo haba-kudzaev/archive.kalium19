@@ -8,10 +8,14 @@ $k-tabSizeDefault     : 0;                                   // ? Указыва
 
 $k-mediaQueries: (                                           // ? Список медиа запросов для миксина "media"
   null: null,
-  w-sm: 'screen and (min-width: 576px)',
-  w-md: 'screen and (min-width: 768px)',
-  w-lg: 'screen and (min-width: 992px)',
-  w-xl: 'screen and (min-width: 1200px)',
+  wmin-sm: 'screen and (min-width: 576px)',
+  wmax-sm: 'screen and (max-width: 576px)',
+  wmin-md: 'screen and (min-width: 768px)',
+  wmax-md: 'screen and (max-width: 768px)',
+  wmin-lg: 'screen and (min-width: 992px)',
+  wmax-lg: 'screen and (max-width: 992px)',
+  wmin-xl: 'screen and (min-width: 1200px)',
+  wmax-xl: 'screen and (max-width: 1200px)',
 ) !default;
 
 // ==== UTILS ==================== //
