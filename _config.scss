@@ -4,7 +4,7 @@
 
 $k-prefixes           : webkit, khtml, moz, ms, o !default;  // ? Список префиксов для миксина "prefixer-all"
 $k-borderRadiusDefault: 0px !default;                        // ? Указывает дефолтное значение для миксина "border-radius"
-$k-tabSizeDefault     : 0;                                   // ? Указывает дефолтное значение для миксина "tab-size"
+$k-tabSizeDefault     : 0 !default;                          // ? Указывает дефолтное значение для миксина "tab-size"
 
 $k-mediaQueries: (                                           // ? Список медиа запросов для миксина "media"
   null: null,
