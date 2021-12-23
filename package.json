@@ -2,8 +2,11 @@
 	"name": "@rx1310/kalium19",
 	"version": "0.0.5",
 	"description": "Набор утилит, миксинов, расширений на языке препроцессора @sass для помощи в ускорении и упрощении написания CSS-стилей.",
-	"main": "css/main.css",
+	"main": "_kalium19.scss",
 	"var": "alpha",
+	"publishConfig": {
+    "access": "public"
+  },
 	"scripts": {
 		"sass:compile": "sass . --style compressed",
 		"sass:watch": "sass --watch .",
@@ -14,6 +17,10 @@
 		"type": "git",
 		"url": "git+https://github.com/91muilak/kalium19.git"
 	},
+	"funding": {
+    "type": "opencollective",
+    "url": "https://opencollective.com/rx1310"
+  },
 	"keywords": [
 		"kalium19",
 		"91muilak",
@@ -22,7 +29,11 @@
 		"SASS",
 		"SCSS"
 	],
-	"author": "Haba Kudzaev <rx1310@inbox.ru>",
+	"author": {
+    "name": "Haba Kudzaev",
+    "email": "rx1310@inbox.ru",
+    "url": "https://rx1310.github.io"
+  },
 	"license": "MIT",
 	"bugs": {
 		"url": "https://github.com/91muilak/kalium19/issues"
