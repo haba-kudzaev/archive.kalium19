@@ -50,16 +50,10 @@
 - A400
 - A700
 
-## Импорт и установка
-Можно напрямую склонировать репозиторий и достать всё что нужно. Но также можно установить MDC в качестве Git Submodule командой:
 
-```bash
-git submodule add https://github.com/91muilak/material-design-colors to/path
-```
-
-### Импорт
-Импорт выполняется через `@import` в SASS. Можно по отдельности подключить конкретный цвет, а можно подключить файл `_palette.scss`, в котором все импорты уже прописаны.
-
+# Импорт
+Импорт всех палитр уже выполняется вместе с импортом файла *_kalium19.scss*.
+<!-- 
 ```scss
 @import 'amber';
 @import 'blue-grey';
@@ -80,6 +74,4 @@ git submodule add https://github.com/91muilak/material-design-colors to/path
 @import 'red';
 @import 'teal';
 @import 'yellow';
-```
-
-> В Вашем случае путь к файлу может отличаться.
+``` -->
