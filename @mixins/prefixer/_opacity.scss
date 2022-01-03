@@ -9,10 +9,14 @@
 	@include prefixer(
 		opacity,
 		$value,
-		moz
+		moz khtml
 	);
 
-	/* for IE8 */
+	/* for IE 5-7 */
 	filter: alpha(opacity=$value-ie);
+
+	/* for IE 8 */
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=#{$value-ie})";
+
 
 }
