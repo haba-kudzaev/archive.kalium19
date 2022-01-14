@@ -1,9 +1,0 @@
-// ! Copyright (c) 2021, Haba Kudzaev (rx1310) <rx1310@inbox.ru>
-
-@mixin keyframes($name) {
-	@-webkit-keyframes #{$name}	{ @content }
-	@-moz-keyframes 	 #{$name}	{ @content }
-	@-ms-keyframes 		 #{$name}	{ @content }
-	@-o-keyframes 		 #{$name}	{ @content }
-	@keyframes 				 #{$name}	{ @content }
-}
