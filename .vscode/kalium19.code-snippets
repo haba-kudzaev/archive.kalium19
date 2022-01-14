@@ -1,0 +1,33 @@
+{
+
+	"Import [SASS]": {
+		"scope": "scss",
+		"prefix": "import",
+		"body": ["@import '$1';"]
+	},
+
+	"Import Mixin [SASS]": {
+		"scope": "scss",
+		"prefix": "import-mixin",
+		"body": ["@import '_/@mixins/$1';"]
+	},
+
+	"Import Extends [SASS]": {
+		"scope": "scss",
+		"prefix": "import-extends",
+		"body": ["@import '_/@extends/$1';"]
+	},
+
+	"Import Utils [SASS]": {
+		"scope": "scss",
+		"prefix": "import-utils",
+		"body": ["@import '_/@utils/$1';"]
+	},
+
+	"Import Colors [SASS]": {
+		"scope": "scss",
+		"prefix": "import-colors",
+		"body": ["@import '_/@colors/$1';"]
+	},
+	
+}
