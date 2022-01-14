@@ -1,1 +1,5 @@
 // ! Copyright (c) 2021, Haba Kudzaev (rx1310) <rx1310@inbox.ru>
+
+// * Opacity
+$k-opacity     : false !default;         // ? Настройка, которая активирует генерацию классов "opacity" при значении true
+$k-opacityClass: "k-opacity-" !default;  // ? Указывает название класса (.k-opacity-55, напр.)

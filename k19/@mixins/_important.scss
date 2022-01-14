@@ -1,0 +1,9 @@
+// ! Copyright (c) 2021, Haba Kudzaev (rx1310) <rx1310@inbox.ru>
+
+@mixin important($declaration: ()) {
+
+	@each $prop, $value in $declaration {
+		#{$prop}: $value !important;
+	}
+
+}

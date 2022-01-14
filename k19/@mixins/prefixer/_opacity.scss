@@ -1,0 +1,22 @@
+// ! Copyright (c) 2021, Haba Kudzaev (rx1310) <rx1310@inbox.ru>
+
+@mixin opacity($value) {
+
+	$value-ie: $value * 100;
+
+	/* ? Opacity Compiled: #{$value} */
+
+	@include prefixer(
+		opacity,
+		$value,
+		moz khtml
+	);
+
+	/* for IE 5-7 */
+	filter: alpha(opacity=$value-ie);
+
+	/* for IE 8 */
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=#{$value-ie})";
+
+
+}

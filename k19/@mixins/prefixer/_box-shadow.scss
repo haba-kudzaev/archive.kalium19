@@ -1,0 +1,15 @@
+// ! Copyright (c) 2021, Haba Kudzaev (rx1310) <rx1310@inbox.ru>
+
+@mixin box-shadow($params...) {
+
+	/* ? Box Shadow Compiled: 
+		#{$params}
+	*/
+
+	@include prefixer(
+		box-shadow,
+		$params,
+		webkit moz
+	);
+
+}

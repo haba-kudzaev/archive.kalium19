@@ -1,0 +1,30 @@
+// ! Copyright (c) 2021, Haba Kudzaev (rx1310) <rx1310@inbox.ru>
+// ! Copyright (c) 2016, Grabr Inc.
+
+@mixin media($query, $max: false) {
+
+  $media: map-get($k-mediaQueries, $query);
+
+  @if $media {
+    @media #{$media} { 
+			@content 
+		};
+  }
+	
+	@else {
+
+		@if $max {
+			@media screen and (max-width: $query) { 
+				@content 
+			};
+		} 
+		
+		@else {
+			@media screen and (min-width: $query) { 
+				@content 
+			};
+		}
+
+	}
+
+}

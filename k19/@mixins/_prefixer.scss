@@ -1,0 +1,59 @@
+// ! Copyright (c) 2021, Haba Kudzaev (rx1310) <rx1310@inbox.ru>
+
+@mixin prefixer-all($prop, $value) {
+
+	@each $prefix in $k-prefixes {
+		-#{$prefix}-#{$prop}: #{$value};
+	}
+
+}
+
+@mixin prefixer($prop, $value, $prefixes: (), $withNonPrefixedDeclaration: true) {
+
+	@if $prefixes == "all" {
+
+		@include prefixer-all($prop, $value);
+
+	} @else {
+
+		@each $prefix in $prefixes {
+			/* #{$prop} for #{$prefix} */
+			#{'-' + $prefix + '-' + $prop}: $value;
+		}
+
+		// ? Вывод стандартного свойства без префикса
+		@if $withNonPrefixedDeclaration {
+			/* non prefixed #{$prop} */
+			#{$prop}: $value;
+		}
+
+	}
+
+}
+
+@mixin prefixer-pack($declarations, $prefixes: (), $withNonPrefixedDeclaration: true) {
+
+	@each $prop, $value in $declarations {
+
+		@if $prefixes == "all" {
+
+			@include prefixer-all($prop, $value);
+
+		} @else {
+
+			@each $prefix in $prefixes {
+				/* #{$prop} for #{$prefix} */
+				#{'-' + $prefix + '-' + $prop}: $value;
+			}
+
+			// ? Вывод стандартного свойства без префикса
+			@if $withNonPrefixedDeclaration {
+				/* non prefixed #{$prop} */
+				#{$prop}: $value;
+			}
+
+		}
+
+	}
+
+}

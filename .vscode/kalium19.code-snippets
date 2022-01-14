@@ -9,25 +9,25 @@
 	"Import Mixin [SASS]": {
 		"scope": "scss",
 		"prefix": "import-mixin",
-		"body": ["@import '_/@mixins/$1';"]
+		"body": ["@import 'k19/@mixins/$1';"]
 	},
 
 	"Import Extends [SASS]": {
 		"scope": "scss",
 		"prefix": "import-extends",
-		"body": ["@import '_/@extends/$1';"]
+		"body": ["@import 'k19/@extends/$1';"]
 	},
 
 	"Import Utils [SASS]": {
 		"scope": "scss",
 		"prefix": "import-utils",
-		"body": ["@import '_/@utils/$1';"]
+		"body": ["@import 'k19/@utils/$1';"]
 	},
 
 	"Import Colors [SASS]": {
 		"scope": "scss",
 		"prefix": "import-colors",
-		"body": ["@import '_/@colors/$1';"]
+		"body": ["@import 'k19/@colors/$1';"]
 	},
 	
 }

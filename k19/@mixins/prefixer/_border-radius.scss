@@ -1,0 +1,47 @@
+// ! Copyright (c) 2021, Haba Kudzaev (rx1310) <rx1310@inbox.ru>
+
+@mixin border-radius($radius: $k-borderRadiusDefault) {
+	/* ? Border Radius Compiled: #{$radius} */
+	@include prefixer(
+		border-radius,
+		$radius,
+		webkit moz
+	)
+}
+
+@mixin border-radius-ext($top-left: 0, $top-right: 0, $bottom-right: 0, $bottom-left: 0, $log: false) {
+
+	/* Border Radius Compiled:
+	? Top Left: #{$top-left}
+	? Top Right: #{$top-right}
+	? Bottom Right: #{$bottom-right}
+	? Bottom Left: #{$bottom-left} */
+
+	// ? Генерация свойств для WebKit
+	@include prefixer-pack(
+		(
+			border-top-left-radius: $top-left,
+			border-top-right-radius: $top-right,
+			border-bottom-right-radius: $bottom-right,
+			border-bottom-left-radius: $bottom-left
+		),
+		webkit
+	);
+
+	// ? Отдельно для Mozilla
+	@include prefixer-pack(
+		(
+			border-radius-topleft: $top-left,
+			border-radius-topright: $top-right,
+			border-radius-bottomright: $bottom-right,
+			border-radius-bottomleft: $bottom-left,
+		),
+		moz,
+		false // ? Не генерируем безпрефиксное свойство (его сгенерировал миксин выше для WebKit
+	);
+
+	@if $log {
+		@warn "Border Radius: TopLeft #{$top-left} | TopRight #{$top-right} | BottomRight #{$bottom-right} | BottomLeft #{$bottom-left}"
+	}
+
+}
