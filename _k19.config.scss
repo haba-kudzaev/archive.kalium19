@@ -1,5 +1,21 @@
 // ! Copyright (c) 2021, Haba Kudzaev (rx1310) <rx1310@inbox.ru>
 
+$k-prefixes           : webkit, khtml, moz, ms, o !default;  // ? Список префиксов для миксина "prefixer-all"
+$k-borderRadiusDefault: 0px !default;                        // ? Указывает дефолтное значение для миксина "border-radius"
+$k-tabSizeDefault     : 0 !default;                          // ? Указывает дефолтное значение для миксина "tab-size"
+
+$k-mediaQueries: (                                           // ? Список медиа запросов для миксина "media"
+  null: null,
+  wmin-sm: 'screen and (min-width: 576px)',
+  wmax-sm: 'screen and (max-width: 576px)',
+  wmin-md: 'screen and (min-width: 768px)',
+  wmax-md: 'screen and (max-width: 768px)',
+  wmin-lg: 'screen and (min-width: 992px)',
+  wmax-lg: 'screen and (max-width: 992px)',
+  wmin-xl: 'screen and (min-width: 1200px)',
+  wmax-xl: 'screen and (max-width: 1200px)',
+) !default;
+
 // * Opacity
 $k-opacity     : false !default;         // ? Настройка, которая активирует генерацию классов "opacity" при значении true
 $k-opacityClass: "k-opacity-" !default;  // ? Указывает название класса (.k-opacity-55, напр.)
