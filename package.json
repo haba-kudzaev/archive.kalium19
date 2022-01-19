@@ -8,8 +8,8 @@
     "access": "public"
   },
 	"scripts": {
-		"sass:compile"         : "sass . --style compressed",
-		"sass:watch"           : "sass --watch .",
+		"sass:compile"         : "sass --no-source-map . --style compressed",
+		"sass:watch"           : "sass --no-source-map --watch .",
 		"sass:watch-compressed": "sass --watch . --style compressed",
 		"editorconfig"         : "editorconfig-checker"
 	},
