@@ -1,0 +1,9 @@
+contact_links:
+  - name: Начать дискуссию
+    url: https://github.com/91muilak/kalium19/discussions/new
+    about: Задавайте вопросы, получайте ответы и узнавайте много нового!
+  - name: Перейти в Discord
+    url: https://discord.gg/WB6r3wv9X5
+    about: Свободное общение и просто собираем комьюнити
+  - name: Перейти в Telegram
+    url: https://t.me/rx1310_dev

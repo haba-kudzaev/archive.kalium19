@@ -1,0 +1,25 @@
+name: commit-to-tg
+
+on:
+  push:
+    branches:
+      - main
+      - develop
+
+jobs:
+  sendMessage:
+    name: Отправка сообщения с информацией о коммите в чат Telegram
+    runs-on: ubuntu-latest
+    steps:
+      - name: Отправка сбщ.
+        uses: appleboy/telegram-action@master
+        with:
+          to: ${{ secrets.TG_GROUP }}
+          token: ${{ secrets.TG_BOT_TOKEN }}
+          format: markdown
+          message: |
+            📌 ${{ github.event.commits[0].message }}
+            👨‍💻 [${{ github.actor }}](https://github.com/${{ github.actor }}) / telegram: @${{ github.actor }}
+            🗂 [${{ github.repository }}](https://github.com/${{ github.repository }})
+            #️⃣ [${{github.sha}}](https://github.com/${{ github.repository }}/commit/${{github.sha}})
+            🤖 ${{github.workflow}}
