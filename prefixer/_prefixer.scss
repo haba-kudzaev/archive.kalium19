@@ -1,0 +1,56 @@
+// @title    Миксин "Prefixer"
+// @file     _index.scss
+// @license  MIT License
+// @date     2022/01/19 18:15:06
+// -----------------------------
+// @creator  Haba Kudzaev (rx1310)
+// @mail     rx1310@inbox.ru
+// @github   https://github.com/rx1310
+
+// ! Переменные
+$prefixes: (
+	webkit, 
+	khtml, 
+	moz, 
+	ms, 
+	o
+) !default;
+
+/*
+ ? Переопределение переменной в своем проекте:
+ * 1 | @use 'kalium19' as k19;
+ * 2 |
+ * 3 | k19.$prefixes: (
+ * 4 | 	webkit, o,d 
+ * 5 | );
+*/
+
+// ! Импорты
+@import 'legacy';
+@import 'pack';
+
+// ! Сам миксин
+@mixin prefixer($prop, $value, $prefixes: (), $defaultDeclaration: true) {
+
+	// * Если параметром $prefixes указано значение
+	// * "all", то будет применен миксин prefixer-legacy.
+	@if $prefixes == "all" {
+
+		@include prefixer-legacy($prop, $value);
+
+	} @else {
+
+		@each $prefix in $prefixes {
+			/* #{$prop} for #{$prefix} */
+			#{'-' + $prefix + '-' + $prop}: $value;
+		}
+
+		// ? Вывод стандартного свойства без префикса
+		@if $defaultDeclaration {
+			/* non prefixed #{$prop} */
+			#{$prop}: $value;
+		}
+
+	}
+
+}

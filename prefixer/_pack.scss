@@ -1,0 +1,35 @@
+// @title    Версия миксина "Prefixer" для добавления префиксов к группе стилей
+// @file     _pack.scss
+// @license  MIT License
+// @date     2022/01/19 18:59:48
+// -----------------------------
+// @creator  Haba Kudzaev (rx1310)
+// @mail     rx1310@inbox.ru
+// @github   https://github.com/rx1310
+
+@mixin prefixer-pack($declarations, $prefixes: (), $defaultDeclaration: true) {
+
+	@each $prop, $value in $declarations {
+
+		// * Если параметром $prefixes указано значение
+		// * "all", то будет применен миксин prefixer-legacy.
+		@if $prefixes == "all" {
+			@include prefixer-legacy($prop, $value);
+		} @else {
+
+			@each $prefix in $prefixes {
+				/* #{$prop} for #{$prefix} */
+				#{'-' + $prefix + '-' + $prop}: $value;
+			}
+
+			// ? Вывод стандартного свойства без префикса
+			@if $defaultDeclaration {
+				/* non prefixed #{$prop} */
+				#{$prop}: $value;
+			}
+
+		}
+
+	}
+
+}

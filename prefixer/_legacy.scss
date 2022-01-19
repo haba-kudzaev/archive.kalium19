@@ -1,0 +1,14 @@
+// @title    Старая версия миксина "Prefixer"
+// @file     _legacy.scss
+// @license  MIT License
+// @date     2022/01/19 18:18:21
+// -----------------------------
+// @creator  Haba Kudzaev (rx1310)
+// @mail     rx1310@inbox.ru
+// @github   https://github.com/rx1310
+
+@mixin prefixer-legacy($prop, $value) {
+	@each $prefix in $prefixes {
+		-#{$prefix}-#{$prop}: #{$value};
+	}
+}
