@@ -10,8 +10,7 @@
 	"scripts": {
 		"sass:compile"         : "sass --no-source-map . --style compressed",
 		"sass:watch"           : "sass --no-source-map --watch .",
-		"sass:watch-compressed": "sass --watch . --style compressed",
-		"editorconfig"         : "editorconfig-checker"
+		"sass:watch-compressed": "sass --watch . --style compressed"
 	},
 	"repository": {
 		"type": "git",
@@ -40,8 +39,7 @@
 	},
 	"homepage": "https://github.com/91muilak/kalium19#readme",
 	"devDependencies": {
-		"editorconfig-checker": "^4.0.2",
 		"npm-run-all": "^4.1.5",
-		"sass": "^1.44.0"
+		"sass": "1.49.0"
 	}
 }
