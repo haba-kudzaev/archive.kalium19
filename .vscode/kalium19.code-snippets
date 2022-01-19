@@ -15,7 +15,7 @@
 	"Forward [SASS]": {
 		"scope": "scss",
 		"prefix": "forward",
-		"body": ["@forward '$1';"]
+		"body": ["@forward '@modules/$1/$1';"]
 	},
 
 	"File info [SASS]": {
