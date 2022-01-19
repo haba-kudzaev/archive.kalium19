@@ -1,0 +1,21 @@
+{
+
+	"Import [SASS]": {
+		"scope": "scss",
+		"prefix": "import",
+		"body": ["@import '$1';"]
+	},
+
+	"Use [SASS]": {
+		"scope": "scss",
+		"prefix": "use",
+		"body": ["@use '$1' as $2;"]
+	},
+
+	"Forward [SASS]": {
+		"scope": "scss",
+		"prefix": "forward",
+		"body": ["@forward '$1';"]
+	}
+	
+}
