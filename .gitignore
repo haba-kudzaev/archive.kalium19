@@ -81,7 +81,7 @@ $RECYCLE.BIN/
 
 # VSCode
 .vscode-test
-.vscode/*
+!.vscode/*
 !.vscode/*.code-snippets
 !.vscode/settings.json
 !.vscode/tasks.json
