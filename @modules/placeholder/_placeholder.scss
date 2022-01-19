@@ -1,0 +1,21 @@
+// @title    Миксин "Placeholder"
+// @file     _placeholder.scss
+// @license  MIT License
+// @date     2022/01/19 19:26:31
+// -----------------------------
+// @creator  Haba Kudzaev (rx1310)
+// @mail     rx1310@inbox.ru
+// @github   https://github.com/rx1310
+
+@mixin placeholder($phClass: false, $phClassName: "placeholder") {
+
+	@if $phClass == true {
+		&.#{$phClassName} { @content; }
+	}
+	
+	&:-moz-placeholder { @content; }
+	&::-moz-placeholder { @content; }
+	&:-ms-input-placeholder { @content; }
+	&::-webkit-input-placeholder { @content; }
+
+}
