@@ -1,0 +1,30 @@
+// @title    Миксин Scrollbar
+// @file     _scrollbar.scss
+// @license  MIT License
+// @date     2022/01/23 16:47:17
+// -----------------------------
+// @author   Hugo Giraudel
+
+@mixin scrollbar($size, $foreground-color, $background-color: mix($foreground-color, white,  50%)) {
+
+	// Chromium
+	::-webkit-scrollbar {
+		width:  $size;
+		height: $size;
+	}
+
+	::-webkit-scrollbar-thumb {
+		background: $foreground-color;
+	}
+
+	::-webkit-scrollbar-track {
+		background: $background-color;
+	}
+
+	// IE
+	body {
+		scrollbar-face-color: $foreground-color;
+		scrollbar-track-color: $background-color;
+	}
+
+}
