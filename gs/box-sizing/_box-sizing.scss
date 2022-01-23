@@ -1,0 +1,27 @@
+// @title    Миксин Box-Sizing
+// @file     _box-sizing.scss
+// @license  MIT License
+// @date     2022/01/23 17:23:09
+// -----------------------------
+// @author   Haba Kudzaev (rx1310)
+// @mail     rx1310@inbox.ru
+// @link     https://github.com/rx1310
+
+// ! Модули
+@use '../prefixer/prefixer' as *;
+
+// ! Сам миксин
+@mixin box-sizing($boxModel: border) {
+
+	@if $boxModel == border	{ $boxModel: border-box; }
+	@else if $boxModel == content { $boxModel: content-box; }
+
+	/* ? Box Sizing Compiled: #{$boxModel} */
+
+	@include prefixer(
+		box-sizing,
+		$boxModel,
+		o moz webkit
+	);
+
+}
