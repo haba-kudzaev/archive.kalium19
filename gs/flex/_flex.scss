@@ -1,0 +1,34 @@
+// @title    Миксины и утилиты для Flexbox
+// @file     _flex.scss
+// @license  MIT License
+// @date     2022/01/23 18:18:07
+// -----------------------------
+// @author   Haba Kudzaev (rx1310)
+// @mail     rx1310@inbox.ru
+// @link     https://github.com/rx1310
+
+// ! Модули
+@use '../prefixer/prefixer' as *;
+@use "sass:map";
+
+// ! Импорты
+@import 'direction';
+
+// ! Сам миксин
+@mixin flexbox($type: null) {
+  
+	@if $type == inline {
+		display: -webkit-inline-box;
+		display: -moz-inline-box;
+		display: -webkit-inline-flex;
+		display: -ms-inline-flexbox;
+		display: inline-flex;
+	} @else {
+		display: -webkit-box;
+		display: -moz-box;
+		display: -ms-flexbox;
+		display: -webkit-flex;
+		display: flex;
+	}
+
+}
