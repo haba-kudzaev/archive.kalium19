@@ -1,0 +1,21 @@
+// @title    Tab-Size
+// @file     _tab-size.scss
+// @license  MIT License
+// @date     2022/01/23 17:01:24
+// -----------------------------
+// @author   Haba Kudzaev (rx1310)
+// @mail     rx1310@inbox.ru
+// @link     https://github.com/rx1310
+
+@use '../prefixer/prefixer' as *;
+
+@mixin tab-size($size) {
+
+	/* ? Tab Size Compiled: #{$size} */
+	@include prefixer(
+		tab-size,
+		$size,
+		o moz
+	);
+
+}
