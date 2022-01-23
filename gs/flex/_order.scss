@@ -1,0 +1,27 @@
+// @title    Миксин для свойства order
+// @file     _order.scss
+// @license  MIT License
+// @date     2022/01/23 18:43:42
+// -----------------------------
+// @author   Haba Kudzaev (rx1310)
+// @mail     rx1310@inbox.ru
+// @link     https://github.com/rx1310
+
+@mixin order($int: 0) {
+
+	@include prefixer(
+		box-ordinal-group,
+		$int + 1,
+		webkit moz,
+		false
+	);
+
+	@include prefixer(
+		order,
+		$int,
+		webkit
+	);
+
+	-ms-flex-order: $int;
+
+}
