@@ -1,5 +1,5 @@
 // @title    Основной файл с импортами модулей
-// @file     _kalium19.scss
+// @file     _index.scss
 // @license  MIT License
 // @date     2022/01/19 18:11:28
 // -----------------------------
@@ -8,5 +8,6 @@
 // @github   https://github.com/rx1310
 
 // * Модули
-@forward '@modules/prefixer/prefixer';
-@forward '@modules/placeholder/placeholder';
+@forward 'gs/prefixer/prefixer';
+@forward 'gs/placeholder/placeholder';
+@forward 'gs/important/important';

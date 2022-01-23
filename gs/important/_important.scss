@@ -1,0 +1,16 @@
+// @title    Important
+// @file     _important.scss
+// @license  MIT License
+// @date     2022/01/23 15:59:26
+// -----------------------------
+// @creator  Haba Kudzaev (rx1310)
+// @mail     rx1310@inbox.ru
+// @github   https://github.com/rx1310
+
+@mixin important($declaration: ()) {
+
+	@each $prop, $value in $declaration {
+		#{$prop}: $value !important;
+	}
+
+}
