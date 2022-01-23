@@ -1,0 +1,16 @@
+// @title    Миксин Keyframes
+// @file     _keyframes.scss
+// @license  MIT License
+// @date     2022/01/23 16:05:09
+// -----------------------------
+// @creator  Haba Kudzaev (rx1310)
+// @mail     rx1310@inbox.ru
+// @github   https://github.com/rx1310
+
+@mixin keyframes($name) {
+	@-webkit-keyframes #{$name}	{ @content }
+	@-moz-keyframes 	 #{$name}	{ @content }
+	@-ms-keyframes 		 #{$name}	{ @content }
+	@-o-keyframes 		 #{$name}	{ @content }
+	@keyframes 				 #{$name}	{ @content }
+}
