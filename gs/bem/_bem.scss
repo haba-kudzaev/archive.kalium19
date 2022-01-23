@@ -1,0 +1,62 @@
+// @title    BEM
+// @file     _bem.scss
+// @license  MIT License
+// @date     2022/01/23 16:13:06
+// -----------------------------
+// @author   Marcmintel
+// @link     https://medium.com/@marcmintel/pushing-bem-to-the-next-level-with-sass-3-4-5239d2371321
+
+// ! Модули SASS
+@use 'sass:map';
+
+// ! Переменные
+$bem: (
+	element: '_',
+	modifier: '-'
+) !default;
+
+// ! Импорты
+@import 'functions';
+
+// ! Миксины
+@mixin b($block) {
+	.#{$block} {
+		@content;
+	}
+}
+
+@mixin e($element) {
+
+	$selector: &;
+
+	@if containsModifier($selector) {
+
+		$block: getBlock($selector);
+
+		@at-root {
+			#{$selector} {
+				#{$block + map.get($bem, element) + $element} {
+					@content;
+				}
+			}
+		}
+
+	} @else {
+
+		@at-root {
+			#{$selector + map.get($bem, element) + $element } {
+				@content;
+			}
+		}
+
+	}
+
+}
+
+@mixin m($modifier) {
+	@at-root {
+		#{&}#{ map.get($bem, modifier) + $modifier } {
+			@content;
+		}
+	}
+}

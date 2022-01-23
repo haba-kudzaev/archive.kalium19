@@ -1,0 +1,37 @@
+// @title    Функции для миксина BEM
+// @file     _function.scss
+// @license  MIT License
+// @date     2022/01/23 16:17:26
+// -----------------------------
+// @author   Marcmintel
+// @link     https://medium.com/@marcmintel/pushing-bem-to-the-next-level-with-sass-3-4-5239d2371321
+
+@function containsModifier($selector) {
+
+	$selector: selectorToString($selector);
+	
+	@if str-index($selector, map.get($bem, modifier)) {
+			@return true;
+	} @else {
+			@return false;
+	}
+
+}
+
+@function selectorToString($selector) {
+	
+	$selector: inspect($selector); //cast to string
+	$selector: str-slice($selector, 2, -2); //remove brackets
+	
+	@return $selector;
+
+}
+
+@function getBlock($selector) {
+
+	$selector: selectorToString($selector);
+	$modifierStart: str-index($selector, map.get($bem, modifier)) - 1;
+
+	@return str-slice($selector, 0, $modifierStart);
+
+}
