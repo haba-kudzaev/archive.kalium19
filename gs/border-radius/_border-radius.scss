@@ -1,0 +1,24 @@
+// @title    Миксин Border Radius
+// @file     _border-radius.scss
+// @license  MIT License
+// @date     2022/01/23 17:27:42
+// -----------------------------
+// @author   Haba Kudzaev (rx1310)
+// @mail     rx1310@inbox.ru
+// @link     https://github.com/rx1310
+
+// ! Модули
+@use '../prefixer/prefixer' as *;
+
+// ! Импорт
+@import 'extended';
+
+// ! Сам миксин
+@mixin border-radius($radius: $k-borderRadiusDefault) {
+	/* ? Border Radius Compiled: #{$radius} */
+	@include prefixer(
+		border-radius,
+		$radius,
+		webkit moz
+	)
+}
