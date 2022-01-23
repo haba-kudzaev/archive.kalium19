@@ -1,7 +1,7 @@
-// @title    Tab-Size
-// @file     _tab-size.scss
+// @title    Миксин Transition
+// @file     _transition.scss
 // @license  MIT License
-// @date     2022/01/23 17:01:24
+// @date     2022/01/23 17:17:53
 // -----------------------------
 // @author   Haba Kudzaev (rx1310)
 // @mail     rx1310@inbox.ru
@@ -11,13 +11,16 @@
 @use '../prefixer/prefixer' as *;
 
 // ! Сам миксин
-@mixin tab-size($size) {
+@mixin transition($params...) {
 
-	/* ? Tab Size Compiled: #{$size} */
+	/* ? Transition Compiled: 
+		#{$params} 
+	*/
+
 	@include prefixer(
-		tab-size,
-		$size,
-		o moz
+		transition,
+		$params,
+		o moz webkit
 	);
 
 }
