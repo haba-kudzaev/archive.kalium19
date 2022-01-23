@@ -13,6 +13,7 @@
 
 // ! Импорты
 @import 'direction';
+@import 'wrap';
 
 // ! Сам миксин
 @mixin flexbox($type: null) {
