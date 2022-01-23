@@ -9,6 +9,13 @@
 
 // ! Модули
 @use '../prefixer/prefixer' as *;
+@use "sass:map";
+
+// ! Переменные
+$opacity: (
+	gen: true,
+	className: 'opacity-'
+) !default;
 
 // ! Сам миксин
 @mixin opacity($value) {
@@ -30,3 +37,6 @@
 	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=#{$value-ie})";
 
 }
+
+// ! Импорт
+@import 'utils';
