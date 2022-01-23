@@ -1,0 +1,18 @@
+// @title    Миксин для свойства flex-flow
+// @file     _flow.scss
+// @license  MIT License
+// @date     2022/01/23 18:41:54
+// -----------------------------
+// @author   Haba Kudzaev (rx1310)
+// @mail     rx1310@inbox.ru
+// @link     https://github.com/rx1310
+
+@mixin flex-flow($values: (row nowrap)) {
+
+	@include prefixer(
+		flex-flow,
+		$values,
+		webkit ms
+	);
+
+}
