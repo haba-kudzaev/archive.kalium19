@@ -16,6 +16,7 @@
 @import 'wrap';
 @import 'flow';
 @import 'order';
+@import 'grow';
 
 // ! Сам миксин
 @mixin flexbox($type: null) {
