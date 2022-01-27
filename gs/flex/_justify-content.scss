@@ -1,0 +1,66 @@
+// @title    Миксин для свойства justify-content
+// @file     _justify-content.scss
+// @license  MIT License
+// @date     2022/01/27 10:57:51
+// -----------------------------
+// @author   Haba Kudzaev (rx1310)
+// @mail     rx1310@inbox.ru
+// @link     https://github.com/rx1310
+
+@mixin justify-content($value: flex-start) {
+
+	@if $value == flex-start {
+
+		@include prefixer(
+			box-pack,
+			start,
+			webkit moz,
+			false
+		);
+
+		-ms-flex-pack: start;
+
+	} @else if $value == flex-end {
+
+		@include prefixer(
+			box-pack,
+			end,
+			webkit moz,
+			false
+		);
+
+		-ms-flex-pack: end;
+
+	} @else if $value == space-between {
+
+		@include prefixer(
+			box-pack,
+			justify,
+			webkit moz,
+			false
+		);
+
+		-ms-flex-pack: justify;
+
+	} @else if $value == space-around {
+			 -ms-flex-pack: distribute;
+	} @else {
+
+		@include prefixer(
+			box-pack,
+			$value,
+			webkit moz,
+			false
+		);
+
+		-ms-flex-pack: $value;
+			 
+	}
+
+	@include prefixer(
+		justify-content,
+		$value,
+		webkit
+	);
+
+}

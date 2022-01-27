@@ -19,6 +19,7 @@
 @import 'grow';
 @import 'shrink';
 @import 'basis';
+@import 'justify-content';
 
 // ! Сам миксин
 @mixin flexbox($type: null) {
