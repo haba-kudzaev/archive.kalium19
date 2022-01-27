@@ -25,9 +25,6 @@
 ![Количество закрытых PR](https://img.shields.io/github/issues-pr-closed-raw/91muilak/kalium19?label=closed%20PR%27s)](https://github.com/91muilak/kalium19/pulls)
 ![visitors](https://visitor-badge.laobi.icu/badge?page_id=91muilak.kalium19)
 
-## 🗿 Как использовать?
-Пока никак...
-
 ## 📥 Установка ![](https://img.shields.io/github/package-json/version/91muilak/kalium19/main?label=%20)
 Выполнить установку Kalium19 можно склонировав весь репозиторий напрямую с GitHub или же установить через пакетный менеджер [npm](https://nodejs.org/en/download/).
 ### 🔴 npm
@@ -37,7 +34,7 @@ npm i @rx1310/kalium19
 ```
 и добавьте файл в импорт:
 ```scss
-@import 'node_modules/@rx1310/kalium19/k19';
+@use 'node_modules/@rx1310/kalium19' as k19;
 ```
 
 ### :octocat: Git
@@ -47,7 +44,7 @@ git clone https://github.com/91muilak/kalium19
 ```
 и добавьте файл в импорт:
 ```scss
-@import 'kalium19/k19';
+@use 'kalium19' as k19;
 ```
 ### 🗂 Git Submodules
 Для клонирования в качестве субмодуля также нужен установленный [git](https://git-scm.com/downloads). Если он установлен, то просто выполните команду в терминале:
@@ -56,7 +53,7 @@ git submodule add https://github.com/91muilak/kalium19
 ```
 и добавьте файл в импорт:
 ```scss
-@import 'kalium19/k19';
+@import 'kalium19' as k19;
 ```
 ## 📦 Сборка
 Для сборки проекта необходим пакетный менеджер [npm](https://nodejs.org/en/download/), который устанавливается вместе с NodeJS. Если npm уже установлен, то откройте в терминале папку проекта и выполните команду:
