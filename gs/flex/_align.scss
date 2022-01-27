@@ -1,0 +1,87 @@
+// @title    Миксины для свойств align-self/content/items
+// @file     _align.scss
+// @license  MIT License
+// @date     2022/01/27 11:03:21
+// -----------------------------
+// @author   Haba Kudzaev (rx1310)
+// @mail     rx1310@inbox.ru
+// @link     https://github.com/rx1310
+
+@mixin align-content($value: stretch) {
+
+	// No Webkit Box Fallback.
+	-webkit-align-content: $value;
+
+	@if $value == flex-start {
+		-ms-flex-line-pack: start;
+	} @else if $value == flex-end {
+		-ms-flex-line-pack: end;
+	} @else {
+		-ms-flex-line-pack: $value;
+	}
+
+	align-content: $value;
+
+}
+
+@mixin align-items($value: stretch) {
+
+	@if $value == flex-start {
+
+		@include prefixer(
+			box-align,
+			start,
+			webkit moz,
+			false
+		);
+
+		-ms-flex-align: start;
+
+	} @else if $value == flex-end {
+
+		@include prefixer(
+			box-align,
+			end,
+			webkit moz,
+			false
+		);
+
+		-ms-flex-align: end;
+
+	} @else {
+
+		@include prefixer(
+			box-align,
+			$value,
+			webkit moz,
+			false
+		);
+
+		-ms-flex-align: $value;
+
+	}
+
+	@include prefixer(
+		align-items,
+		$value,
+		webkit
+	);
+
+}
+ 
+@mixin align-self($value: auto) {
+
+	// No Webkit Box Fallback.
+	-webkit-align-self: $value;
+
+	@if $value == flex-start {
+		-ms-flex-item-align: start;
+	} @else if $value == flex-end {
+		-ms-flex-item-align: end;
+	} @else {
+		-ms-flex-item-align: $value;
+	}
+
+	align-self: $value;
+
+}
