@@ -1,0 +1,18 @@
+// @title    Миксин для свойства flex-basis
+// @file     _basis.scss
+// @license  MIT License
+// @date     2022/01/27 10:54:24
+// -----------------------------
+// @author   Haba Kudzaev (rx1310)
+// @mail     rx1310@inbox.ru
+// @link     https://github.com/rx1310
+
+@mixin flex-basis($value: auto) {
+
+	@include prefixer(
+		flex-basis,
+		$value,
+		webkit
+	);
+
+ }
