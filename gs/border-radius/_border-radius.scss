@@ -10,11 +10,14 @@
 // ! Модули
 @use '../prefixer/prefixer' as *;
 
+// ? Переменные
+$border-radius: 0;
+
 // ! Импорт
 @import 'extended';
 
 // ! Сам миксин
-@mixin border-radius($radius: $k-borderRadiusDefault) {
+@mixin border-radius($radius: $border-radius) {
 	/* ? Border Radius Compiled: #{$radius} */
 	@include prefixer(
 		border-radius,

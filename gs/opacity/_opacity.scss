@@ -11,12 +11,6 @@
 @use '../prefixer/prefixer' as *;
 @use "sass:map";
 
-// ! Переменные
-$opacity: (
-	gen: false,
-	className: 'opacity-'
-) !default;
-
 // ! Сам миксин
 @mixin opacity($value) {
 
@@ -38,5 +32,14 @@ $opacity: (
 
 }
 
-// ! Импорт
-@import 'utils';
+// ? Миксин для генерации классов Opacity
+// * @include gen-opacity("opacity-", 0, 100);
+@mixin gen-opacity($className, $startCount: 0, $endCount: 100) {
+	.#{$className} {
+		@for $opacity from $startCount through $endCount {
+			&#{$opacity} {
+				@include opacity( $opacity / 100 );
+			}
+		}
+	}
+}
