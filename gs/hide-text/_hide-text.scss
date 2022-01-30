@@ -7,15 +7,10 @@
 // @mail     rx1310@inbox.ru
 // @link     https://github.com/rx1310
 
-// ! Шаблон
-%hide-text {
+// ! Сам миксин
+@mixin hide-text() {
 	overflow: hidden;
 	padding: 0;
 	text-indent: 101%;
 	white-space: nowrap;
-}
-
-// ! Сам миксин
-@mixin hide-text() {
-	@extend %hide-text;
 }
