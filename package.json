@@ -1,8 +1,8 @@
 {
 	"name"       : "@rx1310/kalium19",
-	"version"    : "1.0.0",
+	"version"    : "1.0.1",
 	"description": "Набор утилит, миксинов, расширений на языке препроцессора @sass для помощи в ускорении, упрощении и улучщения процесса написания CSS-стилей.",
-	"main"       : "_k19.scss",
+	"main"       : "_index.scss",
 	"var"        : "beta",
 	"publishConfig": {
     "access": "public"
