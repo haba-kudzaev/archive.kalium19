@@ -1,0 +1,16 @@
+// @title    Миксин для генерации класса, скрывающего текст
+// @file     _hide-text.scss
+// @license  MIT License
+// @date     2022/01/30 14:03:09
+// -----------------------------
+// @author   Haba Kudzaev (rx1310)
+// @mail     rx1310@inbox.ru
+// @link     https://github.com/rx1310
+
+// ! Сам миксин
+@mixin hide-text() {
+	overflow: hidden;
+	padding: 0;
+	text-indent: 101%;
+	white-space: nowrap;
+}

@@ -1,0 +1,50 @@
+// @title    Миксин для генерации media
+// @file     _media.scss
+// @license  MIT License
+// @date     2022/01/30 15:03:22
+// -----------------------------
+// @author   Haba Kudzaev (rx1310)
+// @mail     rx1310@inbox.ru
+// @link     https://github.com/rx1310
+
+// ! Предустановки
+$mediaQueries: (
+	null: null,
+	wmin-sm: 'screen and (min-width: 576px)',
+	wmax-sm: 'screen and (max-width: 576px)',
+	wmin-md: 'screen and (min-width: 768px)',
+	wmax-md: 'screen and (max-width: 768px)',
+	wmin-lg: 'screen and (min-width: 992px)',
+	wmax-lg: 'screen and (max-width: 992px)',
+	wmin-xl: 'screen and (min-width: 1200px)',
+	wmax-xl: 'screen and (max-width: 1200px)',
+) !default;
+
+// ! Сам миксин
+@mixin media($query, $max: false) {
+
+	$media: map-get($mediaQueries, $query);
+
+	@if $media {
+		@media #{$media} { 
+			@content 
+		};
+	}
+	
+	@else {
+
+		@if $max {
+			@media screen and (max-width: $query) { 
+				@content 
+			};
+		} 
+		
+		@else {
+			@media screen and (min-width: $query) { 
+				@content 
+			};
+		}
+
+	}
+
+}
