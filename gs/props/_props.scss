@@ -7,9 +7,11 @@
 // @mail     rx1310@inbox.ru
 // @link     https://github.com/rx1310
 
+// ! Импорты
+@import 'apply';
+
 // ? @param Array   $map: указываем имя карты со значениями
 // ? @param Boolean $isRoot: если миксин будет использоваться в корне стилей
-
 @mixin props($map, $isRoot: true) {
 
 	@if $isRoot {

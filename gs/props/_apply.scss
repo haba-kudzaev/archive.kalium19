@@ -1,0 +1,14 @@
+// @title    Миксин для применения кастомных свойств
+// @file     _apply.scss
+// @license  MIT License
+// @date     2022/02/05 15:06:58
+// -----------------------------
+// @author   Haba Kudzaev (rx1310)
+// @mail     rx1310@inbox.ru
+// @link     https://github.com/rx1310
+
+@mixin props-apply($declarations) {
+	@each $prop, $value in $declarations {
+		#{$prop}: var(--#{$value});
+	}
+}
