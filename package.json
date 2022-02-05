@@ -1,16 +1,17 @@
 {
 	"name"       : "@rx1310/kalium19",
-	"version"    : "22.2.5",
+	"version"    : "22.1.0",
 	"description": "Набор утилит, миксинов, расширений на языке препроцессора @sass для помощи в ускорении, упрощении и улучщения процесса написания CSS-стилей.",
 	"main"       : "_index.scss",
-	"var"        : "beta",
+	"var"        : "prod",
 	"publishConfig": {
     "access": "public"
   },
 	"scripts": {
 		"sass:compile"         : "sass --no-source-map . --style compressed",
 		"sass:watch"           : "sass --no-source-map --watch .",
-		"sass:watch-compressed": "sass --watch . --style compressed"
+		"sass:watch-compressed": "sass --watch . --style compressed",
+		"npm:publish"          : "npm publish --access=public"
 	},
 	"repository": {
 		"type": "git",
@@ -40,6 +41,6 @@
 	"homepage": "https://github.com/91muilak/kalium19#readme",
 	"devDependencies": {
 		"npm-run-all": "^4.1.5",
-		"sass": "^1.49.0"
+		"sass": "^1.49.7"
 	}
 }
