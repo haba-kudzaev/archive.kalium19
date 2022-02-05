@@ -1,0 +1,31 @@
+// @title    Миксин Props для генерации кастомных свойств
+// @file     _props.scss
+// @license  MIT License
+// @date     2022/02/05 14:30:21
+// -----------------------------
+// @author   Haba Kudzaev (rx1310)
+// @mail     rx1310@inbox.ru
+// @link     https://github.com/rx1310
+
+// ? @param Array   $map: указываем имя карты со значениями
+// ? @param Boolean $isRoot: если миксин будет использоваться в корне стилей
+
+@mixin props($map, $isRoot: true) {
+
+	@if $isRoot {
+
+		:root {
+			@each $key, $value in $map {
+				--#{$key}: #{$value};
+			}
+		}
+
+	} @else {
+
+		@each $key, $value in $map {
+			--#{$key}: #{$value};
+		}
+
+	}
+
+}
