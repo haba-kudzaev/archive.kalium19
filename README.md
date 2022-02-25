@@ -13,8 +13,6 @@
 
 ![Последний коммит](https://img.shields.io/github/last-commit/91muilak/kalium19)
 ![Количество коммитов в год](https://img.shields.io/github/commit-activity/y/91muilak/kalium19)
-![Последний релиз](https://img.shields.io/github/v/release/91muilak/kalium19)
-![Дата последнего релиза](https://img.shields.io/github/release-date/91muilak/kalium19)
 ![Количество ЯП](https://img.shields.io/github/languages/count/91muilak/kalium19?color=fff)
 ![Топ ЯП](https://img.shields.io/github/languages/top/91muilak/kalium19?color=C76494)
 ![Размер репозитория](https://img.shields.io/github/repo-size/91muilak/kalium19?color=ffb600)
